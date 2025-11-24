@@ -7,9 +7,9 @@
         <meta name="author" content="" />
         <title>Modern Business - Start Bootstrap Template</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon2.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon2.png" />
-        <link rel="shortcut icon" href="assets/favicon2.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png" />
+        <link rel="shortcut icon" href="assets/favicon.png" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,11 +39,11 @@
             <!-- Projects Section-->
             <section class="py-5">
                 <div class="container px-5 mb-5">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
-                    </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
+                            <div class="text-start mb-5">
+                                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+                            </div>
                             <!-- Project Card 1-->
                             <a href="https://marriott.byu.edu/event/casecomp2025" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                                 <div class="card overflow-hidden shadow rounded-4 border-0 mb-5" style="transition: all 0.3s ease; cursor: pointer;">
@@ -75,15 +75,27 @@
                                 </div>
                             </a>
                             <style>
+                                /* Prevent border from shifting content */
+                                a[href="https://marriott.byu.edu/event/casecomp2025"] .card,
+                                a[href="https://riverlogistics.com/"] .card {
+                                    border: 2px solid transparent;
+                                }
+
                                 a[href="https://marriott.byu.edu/event/casecomp2025"] .card:hover,
                                 a[href="https://riverlogistics.com/"] .card:hover {
                                     transform: scale(1.02);
-                                    border: 2px solid #0d6efd !important;
+                                    border-color: #0d6efd !important;
                                     box-shadow: 0 0.5rem 1.5rem rgba(13, 110, 253, 0.3) !important;
                                 }
 
                                 /* Mobile responsive styles for project cards */
                                 @media (max-width: 767.98px) {
+                                    /* Reduce side margins on mobile */
+                                    .container {
+                                        padding-left: 1.25rem !important;
+                                        padding-right: 1.25rem !important;
+                                    }
+
                                     .card .d-flex {
                                         flex-direction: column !important;
                                     }
@@ -101,6 +113,12 @@
 
                                     .card .d-flex img {
                                         object-fit: cover !important;
+                                    }
+
+                                    /* Make footer thinner on mobile */
+                                    footer.bg-white {
+                                        padding-top: 1rem !important;
+                                        padding-bottom: 1rem !important;
                                     }
                                 }
                             </style>

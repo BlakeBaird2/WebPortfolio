@@ -7,9 +7,9 @@
         <meta name="author" content="" />
         <title>Personal - Start Bootstrap Theme</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon2.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon2.png" />
-        <link rel="shortcut icon" href="assets/favicon2.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png" />
+        <link rel="shortcut icon" href="assets/favicon.png" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +47,7 @@
                                 <div class="badge bg-gradient-primary-to-secondary text-white mb-4 mt-4"><div class="text-uppercase">Tech Consulting &middot; Automation &middot; Innovation</div></div>
                                 <h1 class="display-3 fw-bolder mb-3"><span class="text-gradient d-inline">Blake A Baird</span></h1>
                                 <div class="fs-3 fw-light text-muted mb-4">IS Undergraduate, Full Stack Developer, Innovator</div>
-                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3 index-buttons">
                                     <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Resume</a>
                                     <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Projects</a>
                                 </div>
@@ -99,8 +99,116 @@
                 /* Adjust mountain section for large monitors */
                 @media (min-width: 1400px) {
                     .mountain-section {
-                        margin-top: -100px !important;
+                        margin-top: -90px !important;
                         height: 510px !important;
+                    }
+                }
+
+                /* Laptop/tablet view adjustments */
+                @media (min-width: 768px) and (max-width: 1399.98px) {
+                    .mountain-section img {
+                        top: 20% !important;
+                    }
+
+                    .index-buttons .btn:first-child {
+                        margin-right: 0.5rem !important;
+                    }
+                }
+
+                /* Desktop/monitor view button spacing */
+                @media (min-width: 1400px) {
+                    .index-buttons .btn:first-child {
+                        margin-right: 0.5rem !important;
+                    }
+                }
+
+                /* Mobile-specific styles */
+                @media (max-width: 767.98px) {
+                    /* Reduce side margins on mobile */
+                    .container {
+                        padding-left: 1.25rem !important;
+                        padding-right: 1.25rem !important;
+                    }
+
+                    /* Hide the tech consulting badge on mobile */
+                    .badge.bg-gradient-primary-to-secondary {
+                        display: none !important;
+                    }
+
+                    /* Shift header content up */
+                    header.py-5 {
+                        padding-top: 1.5rem !important;
+                    }
+
+                    /* Reduce spacing between title and description */
+                    h1.display-3.fw-bolder {
+                        margin-bottom: 0.5rem !important;
+                    }
+
+                    /* Add more white space on sides for description and buttons */
+                    .text-center.text-lg-start {
+                        padding-left: 1rem !important;
+                        padding-right: 1rem !important;
+                    }
+
+                    /* Make buttons side by side and reduce spacing below */
+                    .d-grid.gap-3.d-sm-flex {
+                        display: flex !important;
+                        flex-direction: row !important;
+                        gap: 0.5rem !important;
+                        margin-bottom: 1rem !important;
+                        padding-left: 2rem !important;
+                        padding-right: 2rem !important;
+                    }
+
+                    .d-grid.gap-3.d-sm-flex .btn {
+                        flex: 1 !important;
+                        padding: 0.75rem 1rem !important;
+                        font-size: 0.9rem !important;
+                    }
+
+                    /* Add white space between buttons and profile photo */
+                    .profile {
+                        margin-top: 1rem !important;
+                    }
+
+                    /* Shrink signature and LinkedIn logo on mobile */
+                    .d-flex.align-items-center.gap-4.mt-5 > div {
+                        font-size: 2rem !important;
+                        position: relative;
+                        top: -8px;
+                    }
+
+                    .linkedin-icon {
+                        font-size: 1.3rem !important;
+                        top: -10px !important;
+                    }
+
+                    /* Crop bottom of mountain photo and reduce white space */
+                    .mountain-section {
+                        height: 300px !important;
+                        margin-top: -110px !important;
+                    }
+
+                    .mountain-section img {
+                        top: 20% !important;
+                    }
+
+                    /* Move About Me section up by reducing padding */
+                    .bg-light.py-5 {
+                        padding-top: 1rem !important;
+                        padding-bottom: 3rem !important;
+                    }
+
+                    /* Reduce the fade overlay height to minimize white banner */
+                    .mountain-section > div > div {
+                        height: 100px !important;
+                    }
+
+                    /* Make footer thinner on mobile */
+                    footer.bg-white {
+                        padding-top: 1rem !important;
+                        padding-bottom: 1rem !important;
                     }
                 }
             </style>

@@ -7,9 +7,9 @@
         <meta name="author" content="" />
         <title>Personal - Start Bootstrap Template</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon2.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon2.png" />
-        <link rel="shortcut icon" href="assets/favicon2.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png" />
+        <link rel="shortcut icon" href="assets/favicon.png" />
         <!-- Custom Google font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,17 +42,15 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-11 col-xl-10 col-xxl-9">
                         <!-- Title and Button Row-->
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
+                        <div class="d-flex justify-content-between align-items-start mb-4 resume-header">
                             <div>
                                 <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resume</span></h1>
                                 <p class="lead text-muted" style="margin-top: 0.05rem;">View or download my resume below</p>
                             </div>
-                            <div style="margin-top: 15px;">
-                                <a class="btn btn-primary btn-lg px-5 py-3" href="assets/resume.pdf" download>
-                                    <i class="bi bi-download me-2"></i>
-                                    Download Resume
-                                </a>
-                            </div>
+                            <a class="btn btn-primary btn-lg py-3 px-4 resume-download-btn" href="assets/resume.pdf" download style="margin-top: 0.85rem;">
+                                <i class="bi bi-download me-2"></i>
+                                Download Resume
+                            </a>
                         </div>
                         <!-- PDF Embed-->
                         <div class="card shadow border-0 rounded-4">
@@ -79,6 +77,32 @@
                 </div>
             </div>
         </footer>
+        <style>
+            /* Mobile-specific styles */
+            @media (max-width: 767.98px) {
+                /* Reduce side margins on mobile */
+                .container {
+                    padding-left: 1.25rem !important;
+                    padding-right: 1.25rem !important;
+                }
+
+                /* Stack title and button vertically on mobile */
+                .resume-header {
+                    flex-direction: column !important;
+                }
+
+                .resume-download-btn {
+                    width: 100% !important;
+                    margin-top: 1rem !important;
+                }
+
+                /* Make footer thinner on mobile */
+                footer.bg-white {
+                    padding-top: 1rem !important;
+                    padding-bottom: 1rem !important;
+                }
+            }
+        </style>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
